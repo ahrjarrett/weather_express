@@ -7,9 +7,11 @@ var app = express();
 var weather = new ForecastIo("b4273f2056175820d34aa2636bac6ff5");
 
 app.use(express.static(path.resolve(__dirname, "public")));
+app.use(express.static(path.resolve(__dirname, "node_modules/jquery/dist")));
+app.use(express.static(path.resolve(__dirname, "node_modules/purecss/build")));
 
 app.set("views", path.resolve(__dirname, "views"));
-app.set("view engine", "ejs");
+app.set("view engine", "jade");
 
 app.get("/", function(req, res) {
   res.render("index");

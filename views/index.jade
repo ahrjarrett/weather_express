@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 What's your zip code?
+  form.pure-form
+    fieldset
+      input(type='number' name='zip' placeholder='90210' autofocus required)
+      input.pure-button.pure-button-primary(type='submit' value='Go')
+  script(src='/jquery.min.js')
+  script(src='/main.js')
